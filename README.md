@@ -1,116 +1,117 @@
-# PII Redactor
+# Incident Operations Dashboard
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)
-![regex](https://img.shields.io/badge/detection-regex-blue?style=flat-square)
-![spaCy](https://img.shields.io/badge/NER-spaCy_optional-09A3D5?style=flat-square)
+![Streamlit](https://img.shields.io/badge/Streamlit-dashboard-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
+![pandas](https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![matplotlib](https://img.shields.io/badge/matplotlib-charts-11557c?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
-A CLI tool that detects and redacts personally identifiable information in
-text — emails, phone numbers, credit-card numbers, Canadian SINs and US
-SSNs — replacing each hit with a `[REDACTED:TYPE]` tag and printing a
-per-type redaction report.
+An incident-operations dashboard over a **synthetic** incident dataset:
+SLA attainment, mean time to resolution (MTTR), severity mix, and weekly
+volume — the same views an SRE / production-support team watches in
+Datadog, PagerDuty, or ServiceNow.
 
-Detection is **pure regex with zero dependencies**; an optional spaCy NER
-pass adds `PERSON` / `ORG` / `LOCATION` entities when spaCy is installed.
+Two frontends share one metrics module (`metrics.py`), so the numbers
+always agree:
+
+- **`app.py`** — interactive Streamlit dashboard with team/severity filters
+- **`report.py`** — CLI fallback that prints the metrics and saves PNG charts
+  (no browser needed)
 
 ## Quickstart
 
 ```bash
-# redact a file, print to stdout
-python redact.py sample_input.txt
+pip install -r requirements.txt
 
-# redact with a per-type report
-python redact.py sample_input.txt --report
+# 1. generate the dataset (300 incidents, seed 42 — reproducible)
+python generate_data.py
 
-# write redacted output to a file
-python redact.py sample_input.txt -o redacted.txt --report
-
-# pipe via stdin
-echo "Call me at 416-555-0132" | python redact.py
-
-# add spaCy NER entities (optional)
-python redact.py notes.txt --use-spacy
+# 2a. interactive dashboard
+streamlit run app.py
+# 2b. or CLI report + PNG charts
+python report.py
 ```
 
-## Example
-
-Input (`sample_input.txt`):
+## Sample output
 
 ```
-Please process the refund for Jane Doe (jane.doe@example.com). Her phone
-number is 416-555-0132 and her backup contact is +1 (647) 555-0198.
+==============================================
+INCIDENT OPERATIONS REPORT (synthetic demo data)
+==============================================
+Total incidents : 300
+SLA attainment  : 87.3%
+Avg MTTR        : 67.6 hours
+P1 incidents    : 10
+SLA breaches    : 38
 
-Her credit card on file ends with the full number 4111 1111 1111 1111.
-For tax purposes we need her SIN 123-456-789 on record.
+Incidents by severity:
+  P1: 10
+  P2: 56
+  P3: 108
+  P4: 126
+
+Avg MTTR by severity (hours):
+  P1: 3.1
+  P2: 16.4
+  P3: 40.7
+  P4: 118.5
+
+SLA attainment by team:
+  Network: 84.7%
+  Data Engineering: 87.0%
+  App Support: 87.2%
+  Platform: 90.0%
+
+charts saved to charts/
 ```
 
-Output:
+Charts produced by `report.py` (also live in the Streamlit app):
+
+| Chart | File |
+|---|---|
+| Incidents by severity (P1–P4) | `charts/severity.png` |
+| Weekly incident volume | `charts/weekly_volume.png` |
+| MTTR trend per week | `charts/mttr_trend.png` |
+| SLA attainment by team | `charts/sla_by_team.png` |
+
+## How the data is generated
+
+`generate_data.py` synthesizes ~300 incidents over the trailing 12 weeks
+(seed 42):
+
+- **Severity mix:** P1 5% / P2 20% / P3 35% / P4 40%
+- **SLA targets:** P1 4h, P2 24h, P3 72h, P4 168h (typical enterprise values)
+- **Resolution times:** scaled to the severity's SLA target, with ~12%
+  breaching the target — because a dashboard with 100% SLA attainment
+  teaches nothing
+- **Dimensions:** owning team (Platform, Data Engineering, Network,
+  App Support) × category (Database, API, Infrastructure, Deployment,
+  Monitoring, Auth)
+
+Every timestamp, title, and team is fictional. The schema mirrors what
+real incident exports look like:
 
 ```
-Please process the refund for Jane Doe ([REDACTED:EMAIL]). Her phone
-number is [REDACTED:PHONE] and her backup contact is [REDACTED:PHONE].
-
-Her credit card on file ends with the full number [REDACTED:CREDIT_CARD].
-For tax purposes we need her SIN [REDACTED:SIN] on record.
+incident_id,title,severity,team,category,opened_at,resolved_at,sla_target_h
+INC-0001,SSO login failures,P4,Platform,Auth,2026-08-22 15:53,2026-08-28 15:11,168
 ```
-
-Redaction report (`--report`):
-
-```
-[redaction report] 8 entities redacted:
-  CREDIT_CARD: 1
-  EMAIL: 2
-  PHONE: 3
-  SIN: 1
-  SSN: 1
-```
-
-## Evaluation
-
-`eval.py` scores the detector against a small **synthetic labeled dataset**
-(`eval_data.jsonl`, 14 examples). A prediction counts only on exact
-span + type match. Per-type precision / recall / F1:
-
-```bash
-python eval.py
-```
-
-```
-TYPE         PRECISION    RECALL        F1   #GOLD
---------------------------------------------------
-CREDIT_CARD      1.000     1.000     1.000       3
-EMAIL            1.000     1.000     1.000       4
-PHONE            1.000     1.000     1.000       5
-SIN              1.000     1.000     1.000       3
-SSN              1.000     1.000     1.000       1
---------------------------------------------------
-MICRO-AVG        1.000     1.000     1.000      16
-```
-
-> Honest caveat: this is a tiny synthetic benchmark tuned around the regex
-> patterns — it demonstrates the eval harness, not production-grade accuracy.
-> Real-world PII detection needs broader patterns, context rules, and a
-> labeled corpus from your domain.
-
-## Design notes
-
-- **Overlap resolution:** all pattern matches are collected, then resolved
-  longest-first at each start offset — a 16-digit card number is never
-  shredded into phone/SIN fragments.
-- **spaCy is strictly optional:** `--use-spacy` degrades gracefully with a
-  warning if spaCy or `en_core_web_sm` is missing. Install with
-  `pip install spacy && python -m spacy download en_core_web_sm`.
-- All sample data uses reserved/fictional values (`555` phone numbers,
-  `4111 1111 1111 1111` test card, sequential SINs) — no real PII anywhere.
 
 ## Project structure
 
 ```
-pii-redactor/
-├── redact.py                 # CLI: detect + redact + report
-├── eval.py                   # precision/recall/F1 harness
-├── eval_data.jsonl           # synthetic labeled dataset (14 examples)
-├── sample_input.txt          # demo input (fictional PII)
-├── sample_output_expected.txt# expected redacted output
-└── requirements.txt          # empty core; spacy optional
+incident-ops-dashboard/
+├── generate_data.py   # synthetic dataset generator -> incidents.csv
+├── metrics.py         # shared KPI computations (SLA, MTTR, distributions)
+├── app.py             # Streamlit dashboard (filters + charts + data table)
+├── report.py          # CLI report + matplotlib PNG fallback
+├── incidents.csv      # generated sample data (300 rows)
+├── charts/            # PNG output from report.py
+└── requirements.txt
 ```
+
+## Why this exists
+
+Production support lives in these numbers: are we meeting SLA, where is
+MTTR drifting, which team is breaching? This demo shows the full loop —
+from raw incident rows to the KPIs a support manager actually reads —
+with clean, testable metric functions instead of one-off notebook cells.
