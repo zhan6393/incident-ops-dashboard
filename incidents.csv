@@ -1,0 +1,301 @@
+incident_id,title,severity,team,category,opened_at,resolved_at,sla_target_h
+INC-0001,SSO login failures,P4,Platform,Auth,2026-08-22 15:53,2026-08-28 15:11,168
+INC-0002,connection pool exhausted,P3,Platform,Database,2026-09-16 16:53,2026-09-16 22:13,72
+INC-0003,auth token refresh failures,P4,App Support,API,2026-08-01 04:50,2026-08-16 17:32,168
+INC-0004,latency p99 breach,P3,Network,API,2026-08-31 13:01,2026-09-04 02:43,72
+INC-0005,MFA push delays,P4,Platform,Auth,2026-07-31 06:00,2026-08-02 23:38,168
+INC-0006,dashboard gap in metrics,P3,Network,Monitoring,2026-09-03 01:03,2026-09-07 04:27,72
+INC-0007,replica lag spiking,P4,Data Engineering,Database,2026-08-10 14:38,2026-08-13 06:12,168
+INC-0008,SSO login failures,P3,Network,Auth,2026-07-07 20:29,2026-07-09 10:42,72
+INC-0009,node disk pressure,P2,App Support,Infrastructure,2026-07-08 00:32,2026-07-08 08:45,24
+INC-0010,DNS resolution flakiness,P2,Platform,Infrastructure,2026-08-07 15:03,2026-08-08 12:37,24
+INC-0011,config drift detected,P3,App Support,Deployment,2026-07-07 08:58,2026-07-08 04:33,72
+INC-0012,dashboard gap in metrics,P3,App Support,Monitoring,2026-08-07 11:53,2026-08-08 00:27,72
+INC-0013,connection pool exhausted,P2,Platform,Database,2026-09-08 02:57,2026-09-08 13:16,24
+INC-0014,alert storm from noisy monitor,P3,App Support,Monitoring,2026-08-26 05:12,2026-08-28 04:53,72
+INC-0015,MFA push delays,P4,Network,Auth,2026-08-13 19:49,2026-08-28 12:07,168
+INC-0016,alert storm from noisy monitor,P3,Data Engineering,Monitoring,2026-09-14 02:48,2026-09-15 15:18,72
+INC-0017,dashboard gap in metrics,P2,Data Engineering,Monitoring,2026-07-22 22:29,2026-07-23 00:07,24
+INC-0018,elevated 5xx on checkout API,P4,Network,API,2026-09-19 15:11,2026-10-01 21:59,168
+INC-0019,latency p99 breach,P4,Data Engineering,API,2026-07-29 05:57,2026-08-04 02:16,168
+INC-0020,MFA push delays,P4,Data Engineering,Auth,2026-08-19 10:25,2026-08-22 13:04,168
+INC-0021,auth token refresh failures,P3,Data Engineering,API,2026-09-18 13:06,2026-09-18 17:10,72
+INC-0022,replica lag spiking,P4,Data Engineering,Database,2026-09-23 13:03,2026-09-25 15:34,168
+INC-0023,token expiry storm,P2,Data Engineering,Auth,2026-07-16 04:37,2026-07-16 16:02,24
+INC-0024,SSO login failures,P2,Platform,Auth,2026-08-03 11:40,2026-08-04 07:32,24
+INC-0025,connection pool exhausted,P4,Platform,Database,2026-08-06 23:46,2026-08-08 00:42,168
+INC-0026,elevated 5xx on checkout API,P2,App Support,API,2026-08-04 17:50,2026-08-05 13:56,24
+INC-0027,connection pool exhausted,P3,Platform,Database,2026-07-06 05:14,2026-07-09 18:35,72
+INC-0028,failed deploy stuck in pipeline,P2,App Support,Deployment,2026-08-31 10:10,2026-09-02 00:34,24
+INC-0029,DNS resolution flakiness,P3,App Support,Infrastructure,2026-08-04 00:21,2026-08-05 15:58,72
+INC-0030,pod evictions in prod cluster,P3,Data Engineering,Infrastructure,2026-08-31 21:30,2026-09-01 05:03,72
+INC-0031,alert storm from noisy monitor,P2,App Support,Monitoring,2026-07-22 18:04,2026-07-22 21:00,24
+INC-0032,MFA push delays,P2,Platform,Auth,2026-08-28 11:00,2026-08-29 00:31,24
+INC-0033,config drift detected,P3,Platform,Deployment,2026-07-15 04:34,2026-07-16 01:04,72
+INC-0034,node disk pressure,P4,Data Engineering,Infrastructure,2026-08-08 18:25,2026-08-14 23:17,168
+INC-0035,connection pool exhausted,P1,Platform,Database,2026-07-21 16:35,2026-07-21 20:09,4
+INC-0036,DNS resolution flakiness,P4,Network,Infrastructure,2026-09-07 08:14,2026-09-09 14:23,168
+INC-0037,MFA push delays,P3,Network,Auth,2026-09-14 18:51,2026-09-18 09:38,72
+INC-0038,dashboard gap in metrics,P2,Network,Monitoring,2026-09-01 00:46,2026-09-01 15:40,24
+INC-0039,replica lag spiking,P3,Network,Database,2026-09-16 02:40,2026-09-16 09:08,72
+INC-0040,auth token refresh failures,P4,Network,API,2026-08-01 05:22,2026-08-18 03:59,168
+INC-0041,pod evictions in prod cluster,P4,Platform,Infrastructure,2026-07-15 05:58,2026-07-15 20:42,168
+INC-0042,DNS resolution flakiness,P4,Platform,Infrastructure,2026-09-01 01:52,2026-09-03 15:45,168
+INC-0043,alert storm from noisy monitor,P4,App Support,Monitoring,2026-09-08 15:12,2026-09-14 00:33,168
+INC-0044,elevated 5xx on checkout API,P4,Platform,API,2026-08-16 09:16,2026-08-18 07:12,168
+INC-0045,failed deploy stuck in pipeline,P4,Platform,Deployment,2026-09-23 07:53,2026-09-29 11:10,168
+INC-0046,elevated 5xx on checkout API,P3,Data Engineering,API,2026-09-24 01:55,2026-09-24 23:35,72
+INC-0047,pod evictions in prod cluster,P4,Network,Infrastructure,2026-07-07 06:42,2026-07-12 22:40,168
+INC-0048,pod evictions in prod cluster,P4,Platform,Infrastructure,2026-09-03 04:51,2026-09-08 12:10,168
+INC-0049,config drift detected,P4,Platform,Deployment,2026-07-16 16:51,2026-07-28 11:29,168
+INC-0050,DNS resolution flakiness,P4,Data Engineering,Infrastructure,2026-08-03 20:25,2026-08-08 03:03,168
+INC-0051,pager misroute,P4,Network,Monitoring,2026-08-19 01:41,2026-08-23 19:30,168
+INC-0052,token expiry storm,P2,App Support,Auth,2026-08-10 01:20,2026-08-10 15:50,24
+INC-0053,pod evictions in prod cluster,P3,Platform,Infrastructure,2026-08-22 16:40,2026-08-23 17:09,72
+INC-0054,pager misroute,P3,Data Engineering,Monitoring,2026-07-28 23:57,2026-07-29 21:57,72
+INC-0055,connection pool exhausted,P4,Network,Database,2026-08-28 01:48,2026-08-29 16:19,168
+INC-0056,pager misroute,P1,App Support,Monitoring,2026-09-18 08:41,2026-09-18 10:58,4
+INC-0057,canary rollback triggered,P4,App Support,Deployment,2026-08-27 18:26,2026-09-02 17:49,168
+INC-0058,elevated 5xx on checkout API,P4,Data Engineering,API,2026-07-23 09:04,2026-07-29 12:12,168
+INC-0059,token expiry storm,P3,App Support,Auth,2026-07-22 05:29,2026-07-24 10:02,72
+INC-0060,pager misroute,P4,App Support,Monitoring,2026-08-01 17:20,2026-08-06 19:24,168
+INC-0061,token expiry storm,P3,App Support,Auth,2026-08-28 14:39,2026-09-02 00:05,72
+INC-0062,elevated 5xx on checkout API,P3,Platform,API,2026-09-08 15:43,2026-09-10 17:06,72
+INC-0063,pager misroute,P3,Network,Monitoring,2026-07-30 10:04,2026-07-31 16:54,72
+INC-0064,dashboard gap in metrics,P4,Platform,Monitoring,2026-08-10 08:07,2026-08-12 13:40,168
+INC-0065,dashboard gap in metrics,P4,App Support,Monitoring,2026-07-20 03:10,2026-07-21 20:45,168
+INC-0066,DNS resolution flakiness,P3,App Support,Infrastructure,2026-08-06 23:57,2026-08-09 15:09,72
+INC-0067,dashboard gap in metrics,P3,App Support,Monitoring,2026-07-17 02:06,2026-07-22 02:27,72
+INC-0068,failed deploy stuck in pipeline,P2,Network,Deployment,2026-08-17 16:38,2026-08-18 10:17,24
+INC-0069,pod evictions in prod cluster,P3,App Support,Infrastructure,2026-09-17 08:06,2026-09-17 15:05,72
+INC-0070,SSO login failures,P2,Platform,Auth,2026-09-22 22:52,2026-09-23 00:31,24
+INC-0071,MFA push delays,P2,App Support,Auth,2026-09-11 04:54,2026-09-11 09:44,24
+INC-0072,auth token refresh failures,P4,Platform,API,2026-08-19 19:30,2026-08-30 07:54,168
+INC-0073,canary rollback triggered,P4,App Support,Deployment,2026-09-02 20:30,2026-09-07 03:45,168
+INC-0074,token expiry storm,P4,Network,Auth,2026-07-13 19:17,2026-07-19 02:01,168
+INC-0075,replica lag spiking,P3,Network,Database,2026-07-23 02:46,2026-07-23 13:13,72
+INC-0076,token expiry storm,P4,App Support,Auth,2026-09-08 09:56,2026-09-14 20:19,168
+INC-0077,failed deploy stuck in pipeline,P4,App Support,Deployment,2026-08-01 23:30,2026-08-02 21:01,168
+INC-0078,alert storm from noisy monitor,P2,App Support,Monitoring,2026-07-09 01:43,2026-07-09 06:51,24
+INC-0079,node disk pressure,P3,Network,Infrastructure,2026-08-23 03:23,2026-08-24 16:28,72
+INC-0080,failed deploy stuck in pipeline,P2,App Support,Deployment,2026-07-16 15:23,2026-07-16 16:58,24
+INC-0081,DNS resolution flakiness,P2,Data Engineering,Infrastructure,2026-07-15 11:37,2026-07-15 20:15,24
+INC-0082,SSO login failures,P3,Network,Auth,2026-07-31 14:48,2026-08-01 02:13,72
+INC-0083,latency p99 breach,P3,Data Engineering,API,2026-08-28 23:37,2026-08-31 09:11,72
+INC-0084,DNS resolution flakiness,P2,Data Engineering,Infrastructure,2026-09-25 00:33,2026-09-25 13:43,24
+INC-0085,replica lag spiking,P4,App Support,Database,2026-09-24 04:49,2026-09-30 15:12,168
+INC-0086,replica lag spiking,P4,App Support,Database,2026-09-18 10:36,2026-09-23 21:39,168
+INC-0087,replica lag spiking,P2,Data Engineering,Database,2026-07-17 09:29,2026-07-17 18:54,24
+INC-0088,node disk pressure,P3,App Support,Infrastructure,2026-07-17 04:04,2026-07-19 07:38,72
+INC-0089,SSO login failures,P4,Network,Auth,2026-09-17 17:52,2026-09-18 13:37,168
+INC-0090,pod evictions in prod cluster,P3,App Support,Infrastructure,2026-09-23 15:49,2026-09-25 16:59,72
+INC-0091,node disk pressure,P2,Data Engineering,Infrastructure,2026-07-09 04:25,2026-07-09 09:54,24
+INC-0092,DNS resolution flakiness,P3,Data Engineering,Infrastructure,2026-09-09 21:04,2026-09-10 20:36,72
+INC-0093,failed deploy stuck in pipeline,P4,Network,Deployment,2026-09-10 08:23,2026-09-13 20:28,168
+INC-0094,config drift detected,P3,Platform,Deployment,2026-08-17 03:51,2026-08-21 07:21,72
+INC-0095,MFA push delays,P4,Platform,Auth,2026-08-24 05:05,2026-08-25 15:59,168
+INC-0096,latency p99 breach,P4,Network,API,2026-07-15 09:27,2026-07-21 20:23,168
+INC-0097,DNS resolution flakiness,P3,Network,Infrastructure,2026-09-14 17:46,2026-09-16 05:29,72
+INC-0098,failed deploy stuck in pipeline,P4,Platform,Deployment,2026-09-16 12:51,2026-09-22 23:57,168
+INC-0099,MFA push delays,P4,Platform,Auth,2026-07-20 08:41,2026-08-01 23:23,168
+INC-0100,slow query blocking writes,P4,App Support,Database,2026-09-01 14:32,2026-09-03 18:29,168
+INC-0101,SSO login failures,P3,Platform,Auth,2026-07-11 15:22,2026-07-12 01:01,72
+INC-0102,token expiry storm,P3,Platform,Auth,2026-09-08 07:08,2026-09-09 19:43,72
+INC-0103,config drift detected,P3,App Support,Deployment,2026-08-27 08:32,2026-08-28 00:29,72
+INC-0104,replica lag spiking,P3,Data Engineering,Database,2026-08-23 09:46,2026-08-25 18:33,72
+INC-0105,elevated 5xx on checkout API,P4,App Support,API,2026-07-30 05:37,2026-08-01 14:41,168
+INC-0106,pager misroute,P4,Data Engineering,Monitoring,2026-08-09 15:13,2026-08-24 13:02,168
+INC-0107,config drift detected,P4,App Support,Deployment,2026-07-06 18:36,2026-07-07 22:06,168
+INC-0108,failed deploy stuck in pipeline,P3,Platform,Deployment,2026-09-15 06:09,2026-09-17 08:34,72
+INC-0109,connection pool exhausted,P4,Data Engineering,Database,2026-07-29 14:46,2026-08-01 11:16,168
+INC-0110,node disk pressure,P4,App Support,Infrastructure,2026-07-09 00:11,2026-07-14 20:30,168
+INC-0111,SSO login failures,P4,Data Engineering,Auth,2026-08-21 15:20,2026-08-26 10:10,168
+INC-0112,replica lag spiking,P3,Network,Database,2026-09-22 12:17,2026-09-27 05:19,72
+INC-0113,pager misroute,P2,App Support,Monitoring,2026-09-04 17:56,2026-09-07 01:27,24
+INC-0114,pager misroute,P4,App Support,Monitoring,2026-09-09 15:38,2026-09-12 21:32,168
+INC-0115,DNS resolution flakiness,P1,App Support,Infrastructure,2026-07-20 18:03,2026-07-20 19:30,4
+INC-0116,token expiry storm,P3,App Support,Auth,2026-08-26 08:13,2026-08-29 04:35,72
+INC-0117,pager misroute,P2,App Support,Monitoring,2026-08-13 04:49,2026-08-13 12:24,24
+INC-0118,dashboard gap in metrics,P3,Platform,Monitoring,2026-09-21 03:20,2026-09-23 17:32,72
+INC-0119,pager misroute,P4,Data Engineering,Monitoring,2026-08-13 15:27,2026-08-15 13:45,168
+INC-0120,SSO login failures,P4,Data Engineering,Auth,2026-09-15 02:26,2026-09-30 10:57,168
+INC-0121,slow query blocking writes,P3,Data Engineering,Database,2026-08-21 12:20,2026-08-22 04:57,72
+INC-0122,dashboard gap in metrics,P4,Network,Monitoring,2026-07-23 14:14,2026-07-25 19:16,168
+INC-0123,replica lag spiking,P4,App Support,Database,2026-09-09 15:12,2026-09-14 05:35,168
+INC-0124,replica lag spiking,P4,Network,Database,2026-08-06 22:51,2026-08-12 00:30,168
+INC-0125,slow query blocking writes,P3,Network,Database,2026-08-29 08:06,2026-08-30 08:58,72
+INC-0126,SSO login failures,P2,Platform,Auth,2026-07-30 00:48,2026-07-30 04:32,24
+INC-0127,config drift detected,P4,Network,Deployment,2026-09-13 19:52,2026-09-17 00:52,168
+INC-0128,dashboard gap in metrics,P4,App Support,Monitoring,2026-09-08 09:26,2026-09-20 17:03,168
+INC-0129,replica lag spiking,P4,Network,Database,2026-08-11 16:39,2026-08-13 12:45,168
+INC-0130,alert storm from noisy monitor,P2,Network,Monitoring,2026-07-07 12:04,2026-07-07 17:22,24
+INC-0131,replica lag spiking,P4,App Support,Database,2026-08-31 02:27,2026-08-31 14:05,168
+INC-0132,alert storm from noisy monitor,P2,Data Engineering,Monitoring,2026-09-01 20:14,2026-09-02 01:55,24
+INC-0133,node disk pressure,P4,Data Engineering,Infrastructure,2026-09-09 04:07,2026-09-15 17:18,168
+INC-0134,slow query blocking writes,P3,Data Engineering,Database,2026-09-24 19:07,2026-09-27 01:49,72
+INC-0135,node disk pressure,P3,Data Engineering,Infrastructure,2026-09-21 18:20,2026-09-22 05:18,72
+INC-0136,alert storm from noisy monitor,P3,Network,Monitoring,2026-07-14 19:39,2026-07-17 12:31,72
+INC-0137,failed deploy stuck in pipeline,P4,Network,Deployment,2026-07-07 23:04,2026-07-13 15:35,168
+INC-0138,MFA push delays,P4,App Support,Auth,2026-08-01 20:10,2026-08-11 23:34,168
+INC-0139,canary rollback triggered,P3,Network,Deployment,2026-07-13 06:49,2026-07-15 01:39,72
+INC-0140,SSO login failures,P4,Platform,Auth,2026-07-06 05:21,2026-07-09 06:47,168
+INC-0141,failed deploy stuck in pipeline,P3,App Support,Deployment,2026-08-05 00:01,2026-08-05 23:52,72
+INC-0142,SSO login failures,P3,Data Engineering,Auth,2026-07-29 21:02,2026-07-30 06:41,72
+INC-0143,latency p99 breach,P4,Network,API,2026-07-18 21:30,2026-07-23 11:13,168
+INC-0144,MFA push delays,P3,App Support,Auth,2026-09-21 13:29,2026-09-21 23:48,72
+INC-0145,latency p99 breach,P2,App Support,API,2026-09-14 11:13,2026-09-14 14:54,24
+INC-0146,pager misroute,P3,App Support,Monitoring,2026-07-10 03:24,2026-07-10 08:42,72
+INC-0147,replica lag spiking,P4,Network,Database,2026-09-04 14:23,2026-09-10 18:08,168
+INC-0148,alert storm from noisy monitor,P1,Data Engineering,Monitoring,2026-08-07 20:58,2026-08-08 00:40,4
+INC-0149,failed deploy stuck in pipeline,P4,Data Engineering,Deployment,2026-08-05 08:46,2026-08-07 16:18,168
+INC-0150,replica lag spiking,P4,Platform,Database,2026-09-08 17:19,2026-09-13 07:38,168
+INC-0151,config drift detected,P3,App Support,Deployment,2026-07-11 08:41,2026-07-11 19:28,72
+INC-0152,alert storm from noisy monitor,P4,App Support,Monitoring,2026-08-19 21:53,2026-08-24 00:54,168
+INC-0153,latency p99 breach,P2,Data Engineering,API,2026-08-26 13:47,2026-08-28 08:18,24
+INC-0154,pager misroute,P2,App Support,Monitoring,2026-08-29 06:32,2026-08-29 09:18,24
+INC-0155,config drift detected,P1,Platform,Deployment,2026-09-18 12:31,2026-09-18 14:11,4
+INC-0156,config drift detected,P3,Platform,Deployment,2026-09-25 12:57,2026-09-27 08:37,72
+INC-0157,failed deploy stuck in pipeline,P4,Platform,Deployment,2026-09-14 15:40,2026-09-18 07:18,168
+INC-0158,latency p99 breach,P4,Network,API,2026-08-15 18:03,2026-08-17 07:46,168
+INC-0159,auth token refresh failures,P3,Data Engineering,API,2026-09-14 18:51,2026-09-16 13:29,72
+INC-0160,config drift detected,P2,App Support,Deployment,2026-07-17 04:39,2026-07-18 00:54,24
+INC-0161,token expiry storm,P4,Network,Auth,2026-08-18 18:39,2026-08-30 14:47,168
+INC-0162,node disk pressure,P4,Platform,Infrastructure,2026-07-24 20:48,2026-08-09 15:48,168
+INC-0163,pager misroute,P4,Platform,Monitoring,2026-07-13 06:43,2026-07-17 02:56,168
+INC-0164,alert storm from noisy monitor,P4,App Support,Monitoring,2026-07-06 16:47,2026-07-10 05:00,168
+INC-0165,token expiry storm,P3,Network,Auth,2026-09-17 06:26,2026-09-18 02:06,72
+INC-0166,DNS resolution flakiness,P4,Data Engineering,Infrastructure,2026-08-11 13:43,2026-08-14 01:17,168
+INC-0167,slow query blocking writes,P2,Network,Database,2026-08-16 19:32,2026-08-17 12:22,24
+INC-0168,DNS resolution flakiness,P4,Data Engineering,Infrastructure,2026-09-17 04:25,2026-09-19 17:43,168
+INC-0169,latency p99 breach,P4,App Support,API,2026-07-13 01:02,2026-07-15 18:24,168
+INC-0170,SSO login failures,P4,Platform,Auth,2026-08-04 06:44,2026-08-14 18:23,168
+INC-0171,auth token refresh failures,P3,App Support,API,2026-08-29 18:58,2026-08-31 09:33,72
+INC-0172,MFA push delays,P4,Platform,Auth,2026-08-14 03:59,2026-08-19 18:05,168
+INC-0173,MFA push delays,P4,Data Engineering,Auth,2026-08-01 21:41,2026-08-06 02:25,168
+INC-0174,alert storm from noisy monitor,P4,Data Engineering,Monitoring,2026-08-28 13:16,2026-09-03 14:21,168
+INC-0175,canary rollback triggered,P3,App Support,Deployment,2026-08-21 10:35,2026-08-23 18:07,72
+INC-0176,MFA push delays,P4,Platform,Auth,2026-07-28 11:32,2026-08-02 07:30,168
+INC-0177,replica lag spiking,P4,Network,Database,2026-09-07 14:39,2026-09-08 21:20,168
+INC-0178,canary rollback triggered,P2,Data Engineering,Deployment,2026-08-14 22:41,2026-08-16 17:22,24
+INC-0179,node disk pressure,P3,Platform,Infrastructure,2026-08-30 22:47,2026-09-01 20:30,72
+INC-0180,canary rollback triggered,P2,Network,Deployment,2026-09-10 00:37,2026-09-10 01:56,24
+INC-0181,elevated 5xx on checkout API,P1,Data Engineering,API,2026-07-17 23:29,2026-07-18 00:33,4
+INC-0182,MFA push delays,P1,App Support,Auth,2026-07-10 09:03,2026-07-10 18:30,4
+INC-0183,MFA push delays,P3,Data Engineering,Auth,2026-09-09 13:40,2026-09-14 06:06,72
+INC-0184,pager misroute,P3,Platform,Monitoring,2026-08-12 20:34,2026-08-15 03:08,72
+INC-0185,canary rollback triggered,P3,App Support,Deployment,2026-09-22 02:43,2026-09-22 22:46,72
+INC-0186,DNS resolution flakiness,P3,Platform,Infrastructure,2026-08-27 23:25,2026-08-30 05:01,72
+INC-0187,slow query blocking writes,P4,Data Engineering,Database,2026-08-13 05:46,2026-08-14 16:39,168
+INC-0188,SSO login failures,P3,App Support,Auth,2026-09-04 19:03,2026-09-07 11:48,72
+INC-0189,auth token refresh failures,P3,Platform,API,2026-09-22 12:08,2026-09-23 17:33,72
+INC-0190,MFA push delays,P3,Platform,Auth,2026-09-03 13:45,2026-09-03 20:27,72
+INC-0191,pod evictions in prod cluster,P3,Platform,Infrastructure,2026-08-03 10:20,2026-08-06 03:55,72
+INC-0192,token expiry storm,P4,App Support,Auth,2026-07-26 11:08,2026-07-27 08:02,168
+INC-0193,dashboard gap in metrics,P2,Data Engineering,Monitoring,2026-08-21 13:01,2026-08-23 13:13,24
+INC-0194,auth token refresh failures,P3,App Support,API,2026-07-31 11:39,2026-08-01 19:26,72
+INC-0195,connection pool exhausted,P4,Platform,Database,2026-07-08 10:44,2026-07-13 12:31,168
+INC-0196,alert storm from noisy monitor,P4,Data Engineering,Monitoring,2026-07-31 21:59,2026-08-07 05:57,168
+INC-0197,pod evictions in prod cluster,P4,App Support,Infrastructure,2026-08-11 08:19,2026-08-20 02:16,168
+INC-0198,latency p99 breach,P3,Network,API,2026-09-11 22:20,2026-09-12 09:34,72
+INC-0199,alert storm from noisy monitor,P4,Data Engineering,Monitoring,2026-08-22 00:09,2026-08-23 05:05,168
+INC-0200,replica lag spiking,P3,App Support,Database,2026-08-18 01:45,2026-08-19 17:00,72
+INC-0201,SSO login failures,P4,Data Engineering,Auth,2026-07-08 17:17,2026-07-10 11:36,168
+INC-0202,config drift detected,P4,Data Engineering,Deployment,2026-09-24 11:32,2026-09-27 18:37,168
+INC-0203,replica lag spiking,P2,Platform,Database,2026-08-19 10:22,2026-08-19 22:56,24
+INC-0204,latency p99 breach,P4,Platform,API,2026-08-18 03:03,2026-08-22 18:17,168
+INC-0205,auth token refresh failures,P2,Data Engineering,API,2026-08-03 06:09,2026-08-04 01:19,24
+INC-0206,latency p99 breach,P2,Data Engineering,API,2026-08-17 00:53,2026-08-17 22:25,24
+INC-0207,auth token refresh failures,P4,Network,API,2026-07-08 05:50,2026-07-10 12:02,168
+INC-0208,pager misroute,P2,Data Engineering,Monitoring,2026-07-15 18:57,2026-07-16 11:43,24
+INC-0209,connection pool exhausted,P3,Platform,Database,2026-09-17 21:26,2026-09-18 18:11,72
+INC-0210,pager misroute,P4,App Support,Monitoring,2026-07-08 22:36,2026-07-12 17:30,168
+INC-0211,latency p99 breach,P4,App Support,API,2026-08-07 13:38,2026-08-15 12:38,168
+INC-0212,latency p99 breach,P3,App Support,API,2026-08-13 03:58,2026-08-15 15:21,72
+INC-0213,alert storm from noisy monitor,P2,Network,Monitoring,2026-07-17 19:47,2026-07-18 02:21,24
+INC-0214,pager misroute,P2,App Support,Monitoring,2026-08-05 15:12,2026-08-06 09:59,24
+INC-0215,latency p99 breach,P4,Data Engineering,API,2026-07-24 06:38,2026-07-25 04:39,168
+INC-0216,auth token refresh failures,P3,Data Engineering,API,2026-07-15 12:04,2026-07-20 19:20,72
+INC-0217,dashboard gap in metrics,P4,Network,Monitoring,2026-09-24 19:40,2026-09-29 23:34,168
+INC-0218,pager misroute,P1,Platform,Monitoring,2026-07-17 16:44,2026-07-17 18:34,4
+INC-0219,latency p99 breach,P3,Platform,API,2026-09-15 10:44,2026-09-16 12:19,72
+INC-0220,pager misroute,P4,Data Engineering,Monitoring,2026-07-24 10:35,2026-08-01 04:28,168
+INC-0221,pager misroute,P3,App Support,Monitoring,2026-07-31 18:29,2026-08-01 07:09,72
+INC-0222,dashboard gap in metrics,P3,App Support,Monitoring,2026-08-20 04:46,2026-08-21 17:24,72
+INC-0223,config drift detected,P4,Network,Deployment,2026-09-25 11:46,2026-10-02 00:20,168
+INC-0224,pager misroute,P3,Platform,Monitoring,2026-07-29 14:26,2026-07-31 20:20,72
+INC-0225,dashboard gap in metrics,P2,Platform,Monitoring,2026-07-28 17:34,2026-07-29 08:10,24
+INC-0226,replica lag spiking,P2,Data Engineering,Database,2026-07-16 01:00,2026-07-16 11:44,24
+INC-0227,config drift detected,P2,Data Engineering,Deployment,2026-07-24 03:09,2026-07-24 15:34,24
+INC-0228,pager misroute,P3,App Support,Monitoring,2026-08-10 12:56,2026-08-12 03:05,72
+INC-0229,dashboard gap in metrics,P3,Network,Monitoring,2026-07-28 16:52,2026-07-29 15:49,72
+INC-0230,MFA push delays,P4,Data Engineering,Auth,2026-07-27 12:37,2026-08-02 18:12,168
+INC-0231,alert storm from noisy monitor,P3,Platform,Monitoring,2026-07-20 10:10,2026-07-22 18:48,72
+INC-0232,token expiry storm,P3,Network,Auth,2026-09-17 11:08,2026-09-18 07:21,72
+INC-0233,alert storm from noisy monitor,P2,Network,Monitoring,2026-08-24 19:01,2026-08-25 08:54,24
+INC-0234,SSO login failures,P2,Data Engineering,Auth,2026-08-27 22:01,2026-08-30 02:03,24
+INC-0235,failed deploy stuck in pipeline,P4,Data Engineering,Deployment,2026-07-06 07:37,2026-07-11 10:19,168
+INC-0236,connection pool exhausted,P3,Platform,Database,2026-07-06 04:53,2026-07-08 07:21,72
+INC-0237,failed deploy stuck in pipeline,P4,Data Engineering,Deployment,2026-09-03 21:14,2026-09-08 22:53,168
+INC-0238,pod evictions in prod cluster,P4,Platform,Infrastructure,2026-07-17 04:01,2026-07-19 15:05,168
+INC-0239,auth token refresh failures,P4,App Support,API,2026-07-24 08:50,2026-07-29 07:47,168
+INC-0240,slow query blocking writes,P3,Data Engineering,Database,2026-08-15 13:31,2026-08-17 08:43,72
+INC-0241,alert storm from noisy monitor,P4,App Support,Monitoring,2026-08-17 20:42,2026-08-19 09:03,168
+INC-0242,replica lag spiking,P3,Data Engineering,Database,2026-08-25 10:52,2026-08-26 07:46,72
+INC-0243,pod evictions in prod cluster,P3,Platform,Infrastructure,2026-07-06 11:23,2026-07-08 10:16,72
+INC-0244,token expiry storm,P3,App Support,Auth,2026-07-24 00:18,2026-07-26 16:52,72
+INC-0245,latency p99 breach,P4,Data Engineering,API,2026-07-28 18:38,2026-08-01 22:38,168
+INC-0246,alert storm from noisy monitor,P4,App Support,Monitoring,2026-08-31 15:24,2026-09-06 11:49,168
+INC-0247,connection pool exhausted,P3,Network,Database,2026-07-17 20:04,2026-07-20 10:11,72
+INC-0248,auth token refresh failures,P3,Data Engineering,API,2026-08-17 06:39,2026-08-21 07:42,72
+INC-0249,slow query blocking writes,P3,App Support,Database,2026-07-31 18:35,2026-08-02 10:44,72
+INC-0250,MFA push delays,P3,Network,Auth,2026-09-25 10:51,2026-09-27 14:47,72
+INC-0251,node disk pressure,P2,App Support,Infrastructure,2026-09-19 06:04,2026-09-21 15:46,24
+INC-0252,latency p99 breach,P3,Data Engineering,API,2026-07-06 23:26,2026-07-08 03:18,72
+INC-0253,failed deploy stuck in pipeline,P3,App Support,Deployment,2026-09-17 01:25,2026-09-17 13:38,72
+INC-0254,dashboard gap in metrics,P2,App Support,Monitoring,2026-09-10 23:53,2026-09-11 17:25,24
+INC-0255,alert storm from noisy monitor,P3,App Support,Monitoring,2026-08-10 15:52,2026-08-11 05:31,72
+INC-0256,connection pool exhausted,P4,Platform,Database,2026-08-05 03:18,2026-08-11 02:08,168
+INC-0257,alert storm from noisy monitor,P2,Platform,Monitoring,2026-09-23 08:29,2026-09-24 04:32,24
+INC-0258,failed deploy stuck in pipeline,P4,App Support,Deployment,2026-08-29 05:54,2026-08-30 11:30,168
+INC-0259,alert storm from noisy monitor,P2,Network,Monitoring,2026-07-13 01:15,2026-07-13 08:58,24
+INC-0260,config drift detected,P4,Data Engineering,Deployment,2026-08-20 15:04,2026-08-24 16:56,168
+INC-0261,dashboard gap in metrics,P4,App Support,Monitoring,2026-07-26 21:45,2026-08-01 04:58,168
+INC-0262,elevated 5xx on checkout API,P4,App Support,API,2026-08-20 10:56,2026-08-23 18:56,168
+INC-0263,canary rollback triggered,P3,Data Engineering,Deployment,2026-09-20 05:41,2026-09-20 17:59,72
+INC-0264,SSO login failures,P3,Network,Auth,2026-09-17 08:13,2026-09-18 22:32,72
+INC-0265,MFA push delays,P2,App Support,Auth,2026-07-12 04:05,2026-07-12 21:45,24
+INC-0266,canary rollback triggered,P4,Data Engineering,Deployment,2026-09-01 12:48,2026-09-01 23:31,168
+INC-0267,SSO login failures,P4,Platform,Auth,2026-07-28 15:23,2026-07-30 06:43,168
+INC-0268,config drift detected,P3,Network,Deployment,2026-07-30 05:26,2026-07-31 01:59,72
+INC-0269,connection pool exhausted,P4,App Support,Database,2026-07-29 12:09,2026-07-31 19:52,168
+INC-0270,MFA push delays,P3,Data Engineering,Auth,2026-09-09 22:51,2026-09-11 16:18,72
+INC-0271,auth token refresh failures,P3,Data Engineering,API,2026-08-15 15:43,2026-08-17 13:44,72
+INC-0272,token expiry storm,P3,App Support,Auth,2026-07-06 23:36,2026-07-09 02:41,72
+INC-0273,elevated 5xx on checkout API,P2,App Support,API,2026-07-20 03:04,2026-07-20 22:24,24
+INC-0274,connection pool exhausted,P4,Platform,Database,2026-08-06 18:14,2026-08-07 12:55,168
+INC-0275,pod evictions in prod cluster,P1,App Support,Infrastructure,2026-09-20 03:27,2026-09-20 05:24,4
+INC-0276,connection pool exhausted,P1,App Support,Database,2026-09-25 06:21,2026-09-25 10:04,4
+INC-0277,auth token refresh failures,P3,App Support,API,2026-09-14 19:34,2026-09-15 11:37,72
+INC-0278,DNS resolution flakiness,P3,Network,Infrastructure,2026-08-08 20:44,2026-08-09 16:06,72
+INC-0279,token expiry storm,P2,Platform,Auth,2026-07-06 22:02,2026-07-07 07:23,24
+INC-0280,SSO login failures,P2,Platform,Auth,2026-09-06 20:36,2026-09-07 04:58,24
+INC-0281,elevated 5xx on checkout API,P4,Platform,API,2026-08-31 00:11,2026-09-02 01:35,168
+INC-0282,alert storm from noisy monitor,P4,Network,Monitoring,2026-07-17 02:05,2026-07-22 19:04,168
+INC-0283,MFA push delays,P4,Data Engineering,Auth,2026-08-07 20:48,2026-08-13 13:38,168
+INC-0284,failed deploy stuck in pipeline,P4,Network,Deployment,2026-09-10 00:21,2026-09-24 22:21,168
+INC-0285,latency p99 breach,P2,App Support,API,2026-09-18 12:29,2026-09-19 10:19,24
+INC-0286,replica lag spiking,P4,Network,Database,2026-07-08 14:17,2026-07-12 00:52,168
+INC-0287,config drift detected,P3,App Support,Deployment,2026-09-04 01:30,2026-09-04 10:40,72
+INC-0288,MFA push delays,P3,Data Engineering,Auth,2026-09-18 20:50,2026-09-20 22:33,72
+INC-0289,pod evictions in prod cluster,P2,App Support,Infrastructure,2026-08-12 20:02,2026-08-14 07:58,24
+INC-0290,latency p99 breach,P4,Platform,API,2026-09-16 17:40,2026-09-20 13:57,168
+INC-0291,pod evictions in prod cluster,P2,Platform,Infrastructure,2026-07-17 20:29,2026-07-17 21:57,24
+INC-0292,token expiry storm,P3,Platform,Auth,2026-07-16 15:31,2026-07-17 12:33,72
+INC-0293,latency p99 breach,P3,Platform,API,2026-08-03 14:41,2026-08-05 21:00,72
+INC-0294,SSO login failures,P3,Data Engineering,Auth,2026-07-09 07:29,2026-07-10 16:46,72
+INC-0295,pod evictions in prod cluster,P3,App Support,Infrastructure,2026-07-10 10:16,2026-07-11 18:24,72
+INC-0296,pod evictions in prod cluster,P4,Data Engineering,Infrastructure,2026-08-17 03:23,2026-08-19 11:18,168
+INC-0297,token expiry storm,P4,Network,Auth,2026-07-08 07:31,2026-07-10 17:12,168
+INC-0298,DNS resolution flakiness,P4,App Support,Infrastructure,2026-09-12 04:55,2026-09-16 00:30,168
+INC-0299,failed deploy stuck in pipeline,P3,Data Engineering,Deployment,2026-08-21 01:03,2026-08-23 08:13,72
+INC-0300,token expiry storm,P4,Data Engineering,Auth,2026-08-20 15:51,2026-08-25 12:24,168
